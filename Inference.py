@@ -5,13 +5,13 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 @st.cache_resource
 def load_model():
-    with open('C:/Users/ben/Documents/BInus punya urusan/tugas/Sem 4/Model Deployment/UTS/XGBoost_best_model.pkl', 'rb') as f:
+    with open('XGBoost_best_model.pkl', 'rb') as f:
         model = pickle.load(f)
-    with open('C:/Users/ben/Documents/BInus punya urusan/tugas/Sem 4/Model Deployment/UTS/encoder.pkl', 'rb') as f:
+    with open('encoder.pkl', 'rb') as f:
         encoder = pickle.load(f)
-    with open('C:/Users/ben/Documents/BInus punya urusan/tugas/Sem 4/Model Deployment/UTS/scaler.pkl', 'rb') as f:
+    with open('scaler.pkl', 'rb') as f:
         scaler = pickle.load(f)
-    with open('C:/Users/ben/Documents/BInus punya urusan/tugas/Sem 4/Model Deployment/UTS/clean_df.pkl', 'rb') as f:
+    with open('clean_df.pkl', 'rb') as f:
         clean_df = pickle.load(f)
     return model, encoder, scaler, clean_df
 
